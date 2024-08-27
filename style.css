@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container .spinBtn {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-color: blueviolet;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.container .wheel {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: aquamarine;
+    overflow: hidden;
+}
+
+.container .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .wheel .number span {
+    transform: rotate(45deg);
+}
